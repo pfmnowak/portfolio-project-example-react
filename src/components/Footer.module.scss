@@ -1,0 +1,21 @@
+.footer {
+	background-color: var(--color-primary);
+	min-height: 6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	&__copyright {
+		padding: 2rem;
+		font-size: 1.4rem;
+		line-height: 19px;
+		color: var(--color-white);
+		font-weight: 400;
+		font-family: 'Poppins', sans-serif;
+		text-align: center;
+	}
+
+	&__author {
+		font-weight: 600;
+	}
+}
