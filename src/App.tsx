@@ -1,12 +1,11 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import './App.css';
+import classes from './App.module.scss';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 
 function App() {
 	return (
-		<div className='App'>
-			<header className='App-header' />
+		<div className={classes.app}>
 			<Routes>
 				<Route path='/' element={<HomePage />} />
 				{/* <Route path='/experience' element={<ExperiencePage />} /> */}
