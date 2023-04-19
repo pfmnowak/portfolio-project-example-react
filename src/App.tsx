@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import classes from './App.module.scss';
-import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
+import Footer from './components/Footer/Footer';
+import HomePage from './pages/HomePage/HomePage';
 
 function App() {
 	return (

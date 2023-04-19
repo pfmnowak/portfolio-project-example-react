@@ -1,4 +1,4 @@
-import ServiceItem from '../components/ServiceItem/ServiceItem';
+import ServiceItem from '../../components/ServiceItem/ServiceItem';
 import classes from './HomePage.module.scss';
 
 const fakeData = [
