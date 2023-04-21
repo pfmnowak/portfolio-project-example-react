@@ -1,0 +1,9 @@
+@import '../../sass/main.scss';
+
+.header-section {
+	min-height: 100rem;
+	background-color: var(--color-secondary-light);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}

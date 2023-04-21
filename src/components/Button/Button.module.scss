@@ -1,0 +1,17 @@
+.button {
+	min-width: 17rem;
+	height: 4.8rem;
+	background-color: var(--color-primary);
+	color: #fafafa;
+	font-size: var(--default-font-size);
+	font-weight: 600;
+	line-height: 20px;
+	transition: all 0.2s;
+	cursor: pointer;
+	border: none;
+	outline: none;
+
+	&:active {
+		transform: translateY(2px);
+	}
+}
