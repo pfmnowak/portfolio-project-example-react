@@ -1,4 +1,4 @@
-import { formatDate } from '../../helpers/formatDate';
+import { formatDate } from '../../../../helpers/formatDate';
 import classes from './Qualification.module.scss';
 
 type QualificationProps = {
@@ -16,7 +16,7 @@ const Qualification = ({ company, description, title, from, to, icon }: Qualific
 			<div className={classes['qualification__header']}>
 				<div className={classes['qualification__icon-box']}>
 					<img
-						src={require(`../../img/${icon}.png`)}
+						src={require(`../../../../img/${icon}.png`)}
 						className={classes['qualification__icon']}
 						alt={`${icon} Icon`}
 					/>

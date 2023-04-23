@@ -11,7 +11,7 @@ const ServiceItem = ({ title, text, icon }: ServiceItemProps) => {
 		<li className={classes['service-item']}>
 			<div className={classes['service-item__circle']}>
 				<img
-					src={require(`../../img/${icon}.png`)}
+					src={require(`../../../../img/${icon}.png`)}
 					className={classes['service-item__icon']}
 					alt={`${icon} Icon`}
 				/>
