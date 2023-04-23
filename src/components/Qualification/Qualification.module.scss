@@ -1,0 +1,68 @@
+@import '../../sass/main.scss';
+
+.qualification {
+	box-shadow: var(--shadow-dark);
+	flex: 0 0 48%;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	margin: 2rem 0;
+	padding: 5rem;
+
+	@include respond(phone) {
+		padding: 3.5rem;
+	}
+
+	&__header {
+		display: flex;
+	}
+
+	&__icon-box {
+		width: 4rem;
+		height: 4rem;
+		margin-top: 0.4rem;
+		background-color: var(--color-primary);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__icon {
+		width: 2.3rem;
+		user-select: none;
+	}
+
+	&__info {
+		margin-left: 3rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__company {
+		font-size: 1.8rem;
+		line-height: 24px;
+		color: #d7d7d7;
+		font-weight: 500;
+	}
+
+	&__date {
+		font-size: 1.4rem;
+		line-height: 24px;
+		color: #777777;
+	}
+
+	&__title {
+		margin: 2rem 0;
+		font-size: 2rem;
+		line-height: 24px;
+		color: var(--color-white);
+		font-weight: 600;
+	}
+
+	&__description {
+		min-height: 8.9rem;
+		font-size: 1.5rem;
+		line-height: 28px;
+		color: #e8e1e1;
+	}
+}
