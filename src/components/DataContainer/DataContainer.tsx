@@ -1,5 +1,8 @@
 import { ReactNode } from 'react';
+import { PulseLoader } from 'react-spinners';
+import { colorPrimary } from '../../constants';
 import useFetchData from '../../hooks/useFetchData';
+import ErrorMessage from '../ui/ErrorMessage/ErrorMessage';
 
 type DataContainerProps = {
 	url: string;
@@ -12,14 +15,10 @@ const DataContainer = ({ url, renderData }: DataContainerProps) => {
 
 	return (
 		<>
-			{
-				loading && 'Loading...'
-				// <FadeLoader loading={loadingServices} aria-label='Loading Spinner' />
-			}
-			{
-				hasError && 'Could not fetch the data. Please try again'
-				// <ErrorMessage>Could not fetch the data. Please try again</ErrorMessage>
-			}
+			{loading && (
+				<PulseLoader loading={loading} color={colorPrimary} aria-label='Loading Spinner' />
+			)}
+			{hasError && <ErrorMessage>Could not fetch the data. Please try again</ErrorMessage>}
 			{!hasError && !loading && renderData(data)}
 		</>
 	);
