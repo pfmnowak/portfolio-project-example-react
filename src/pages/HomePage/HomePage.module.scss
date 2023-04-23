@@ -1,14 +1,14 @@
 @import '../../sass/main.scss';
 
 .home {
-	padding: 5rem 1rem;
 	max-width: 117rem;
 	width: 100%;
-	margin: 0 auto;
+	margin: 3rem auto;
 }
 
 .services {
 	display: flex;
+	margin-top: 1rem;
 
 	@include respond(tab-port) {
 		flex-direction: column;

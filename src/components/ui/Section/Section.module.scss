@@ -1,7 +1,13 @@
+@import '../../../sass/main.scss';
+
 .section {
 	max-width: 117rem;
 	width: 100%;
 	margin: 10rem auto;
+
+	@include respond(tab-port) {
+		padding: 0 1rem;
+	}
 
 	&__title {
 		font-size: 2.4rem;
@@ -23,6 +29,8 @@
 		font-size: 1.5rem;
 		line-height: 28px;
 		color: #faf7ff;
+		margin: 2rem auto;
+		text-align: justify;
 	}
 
 	&__content {

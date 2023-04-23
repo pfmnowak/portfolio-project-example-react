@@ -1,4 +1,5 @@
 import ServiceItem from '../../components/ServiceItem/ServiceItem';
+import Section from '../../components/ui/Section/Section';
 import classes from './HomePage.module.scss';
 
 const fakeData = [
@@ -44,16 +45,22 @@ const getIcon = (itemName: string) => {
 const HomePage = () => {
 	return (
 		<div className={classes.home}>
-			<ul className={classes.services}>
-				{fakeData.map(item => (
-					<ServiceItem
-						key={item.id}
-						text={item.description}
-						title={item.name}
-						icon={getIcon(item.name)}
-					/>
-				))}
-			</ul>
+			<Section
+				title='What we do'
+				subtitle='Better Services For You'
+				description='It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has'
+			>
+				<ul className={classes.services}>
+					{fakeData.map(item => (
+						<ServiceItem
+							key={item.id}
+							text={item.description}
+							title={item.name}
+							icon={getIcon(item.name)}
+						/>
+					))}
+				</ul>
+			</Section>
 		</div>
 	);
 };

@@ -1,6 +1,17 @@
+@import '../../../sass/main.scss';
+
 .text-container {
 	column-count: 2;
 	column-gap: 5rem;
 	text-align: justify;
 	font-size: var(--default-font-size);
+	margin: auto;
+
+	@include respond(tab-land) {
+		width: 97%;
+	}
+
+	@include respond(phone) {
+		column-count: 1;
+	}
 }
