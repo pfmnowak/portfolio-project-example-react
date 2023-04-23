@@ -7,3 +7,84 @@
 	display: flex;
 	flex-direction: column;
 }
+
+.content {
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+	max-width: 117rem;
+	width: 100%;
+	margin: 0 auto;
+
+	@include respond(tab-port) {
+		flex-direction: column;
+	}
+}
+
+.header-text {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10rem;
+	align-items: start;
+	text-align: left;
+	color: #fafafa;
+
+	@include respond(tab-port) {
+		margin: 5rem;
+	}
+
+	@include respond(tab-port) {
+		margin: 3rem;
+	}
+}
+
+.heading-primary {
+	margin: 2rem 0;
+
+	&--main {
+		font-size: 6rem;
+		line-height: 72px;
+		font-weight: 700;
+	}
+
+	&--sub {
+		font-size: 2rem;
+		line-height: 20px;
+		font-weight: 600;
+	}
+
+	&--color {
+		color: var(--color-primary);
+	}
+}
+
+.skill-list {
+	font-size: 1.8rem;
+	line-height: 38px;
+	list-style-position: inside;
+}
+
+.header-image {
+	width: 67%;
+	display: flex;
+	align-items: flex-end;
+
+	@include respond(tab-land) {
+		width: 135%;
+	}
+
+	@include respond(tab-port) {
+		width: 80%;
+		margin: auto;
+		justify-content: center;
+	}
+}
+
+.model {
+	object-fit: cover;
+	width: 150%;
+
+	@include respond(tab-port) {
+		width: 80%;
+	}
+}
