@@ -1,6 +1,29 @@
-# Getting Started with Create React App
+# portfolio-project-example-react
+
+This React app is a simple portfolio project created from a Photoshop design.
+
+Created by ~ Mikołaj Nowak
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Used technologies
+
+- React
+- TypeScript
+- React Testing Library (RTL)
+- Jest
+- SASS (SCSS)
+- Modern JavaScript features
+- Flexbox
+- React Routing
+- ESLint
+- Prettier
+
+## Possible improvements ToDo
+
+- Add comments section
+- Add background icons in the Header
+- Add more Unit Tests
 
 ## Available Scripts
 
