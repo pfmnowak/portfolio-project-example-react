@@ -15,9 +15,9 @@ const Comment = ({ createdAt, name, email, content }: CommentProps) => {
 		<li className={classes.comment}>
 			<p className={classes.comment__date}>{formatDateFull(createdAt)}</p>
 			<p className={classes.comment__user}>
-				{name} {email}
+				{name} {email ? email : '-'}
 			</p>
-			<p className={classes.comment__content}>{content}</p>
+			<p className={classes.comment__content}>{content ? content : '-'}</p>
 		</li>
 	);
 };

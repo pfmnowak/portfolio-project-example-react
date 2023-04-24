@@ -1,12 +1,5 @@
 .comments {
-	padding: 8rem;
-
-	&__header {
-		font-size: 2.5rem;
-	}
-
-	&__items {
-		display: flex;
-		flex-direction: column;
-	}
+	display: flex;
+	flex-direction: column;
+	margin: 2rem 0;
 }

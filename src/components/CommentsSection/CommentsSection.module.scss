@@ -1,0 +1,24 @@
+@import '../../sass/main.scss';
+
+.comments-section {
+	max-width: 80rem;
+	width: 100%;
+	margin: auto;
+	padding: 8rem 0 8rem 18rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	@include respond(tab-port) {
+		padding-left: 12rem;
+	}
+
+	@include respond(phone) {
+		padding: 6rem 2rem;
+		align-items: stretch;
+	}
+
+	&__header {
+		font-size: 2.5rem;
+	}
+}

@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import classes from './App.module.scss';
-import Comments from './components/Comments/Comments';
+import CommentsSection from './components/CommentsSection/CommentsSection';
 import Footer from './components/Footer/Footer';
 import HeaderSection from './components/HeaderSection/HeaderSection';
 import ExperiencePage from './pages/ExperiencePage/ExperiencePage';
@@ -20,7 +20,7 @@ function App() {
 				<Route path='/services' element={<ServicesPage />} />
 				<Route path='*' element={<Navigate to='/' replace />} />
 			</Routes>
-			<Comments ref={commentsRef} />
+			<CommentsSection ref={commentsRef} />
 			<Footer />
 		</div>
 	);

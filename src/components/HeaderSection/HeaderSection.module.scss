@@ -2,7 +2,7 @@
 
 .header-section {
 	min-height: 100rem;
-	background-color: var(--color-secondary-light);
+	background-color: var(--color-secondary);
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -48,7 +48,7 @@
 	}
 
 	&--sub {
-		font-size: 2rem;
+		font-size: var(--font-size-large);
 		line-height: 20px;
 		font-weight: 600;
 	}

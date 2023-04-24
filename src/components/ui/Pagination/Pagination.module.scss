@@ -1,0 +1,34 @@
+@import '../../../sass/main.scss';
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	padding: 4rem 0;
+
+	&__item {
+		padding: 0 1rem;
+		width: 4rem;
+		height: 5rem;
+		background-color: var(--color-secondary-light);
+		margin: auto 0.4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		user-select: none;
+		font-size: var(--default-font-size);
+
+		&:hover:not(.dots):not(.selected) {
+			background-color: var(--color-black);
+			color: var(--color-primary);
+		}
+
+		&:hover:not(.dots) {
+			cursor: pointer;
+		}
+
+		&.selected {
+			background-color: var(--color-primary);
+		}
+	}
+}

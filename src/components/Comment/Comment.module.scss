@@ -1,20 +1,25 @@
+@import '../../sass/main.scss';
+
 .comment {
 	font-size: var(--default-font-size);
-	padding: 2rem 0;
+	padding: 3rem 0;
 	text-align: left;
 	list-style: none;
-	max-width: 60rem;
 	width: 100%;
 	margin: auto;
+
+	@include respond(phone) {
+		width: 95%;
+	}
 
 	&__date {
 		color: var(--color-grey-light);
 	}
 
 	&__user {
-		font-size: 2rem;
+		font-size: var(--font-size-large);
 		font-weight: 600;
-		margin: 1rem 0;
+		margin: 0.8rem 0;
 	}
 
 	&__content {
