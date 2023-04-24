@@ -1,6 +1,7 @@
 import { Ref, forwardRef } from 'react';
 import { API_URL } from '../../constants';
 import { Comment as CommentType } from '../../types/types';
+import Comment from '../Comment/Comment';
 import DataContainer from '../DataContainer/DataContainer';
 import classes from './Comments.module.scss';
 
@@ -17,26 +18,28 @@ const Comments = forwardRef(function Comments(_props, ref: Ref<HTMLHeadingElemen
 
 	const renderComments = (comments: any[] | undefined) => {
 		return (
-			<ul className={classes.qualifications}>
+			<ul className={classes.comments__items}>
 				{comments &&
 					comments.map((comment: CommentType) => (
-						<>
-							<p>{comment.createdAt}</p>
-							<p>
-								{comment.name} {comment.email}
-							</p>
-							<p>{comment.content}</p>
-						</>
+						<Comment
+							key={comment.id}
+							createdAt={comment.createdAt}
+							name={comment.name}
+							email={comment.email}
+							content={comment.content}
+						/>
 					))}
 			</ul>
 		);
 	};
 
 	return (
-		<div className={classes.comments}>
-			<h4 ref={ref}>Comments</h4>
+		<section className={classes.comments}>
+			<h4 ref={ref} className={classes.comments__header}>
+				Comments
+			</h4>
 			<DataContainer url={`${API_URL}/comments`} renderData={() => renderComments(comments)} />
-		</div>
+		</section>
 	);
 });
 

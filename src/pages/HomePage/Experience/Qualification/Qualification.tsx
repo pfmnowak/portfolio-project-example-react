@@ -1,4 +1,4 @@
-import { formatDate } from '../../../../helpers/formatDate';
+import { formatDateMonthYear } from '../../../../helpers/formatDate';
 import classes from './Qualification.module.scss';
 
 type QualificationProps = {
@@ -24,7 +24,7 @@ const Qualification = ({ company, description, title, from, to, icon }: Qualific
 				<div className={classes['qualification__info']}>
 					<h5 className={classes['qualification__company']}>{company}</h5>
 					<p className={classes['qualification__date']}>
-						{formatDate(from)} - {to ? formatDate(to) : 'now'}
+						{formatDateMonthYear(from)} - {to ? formatDateMonthYear(to) : 'now'}
 					</p>
 				</div>
 			</div>

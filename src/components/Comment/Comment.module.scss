@@ -1,0 +1,23 @@
+.comment {
+	font-size: var(--default-font-size);
+	padding: 2rem 0;
+	text-align: left;
+	list-style: none;
+	max-width: 60rem;
+	width: 100%;
+	margin: auto;
+
+	&__date {
+		color: var(--color-grey-light);
+	}
+
+	&__user {
+		font-size: 2rem;
+		font-weight: 600;
+		margin: 1rem 0;
+	}
+
+	&__content {
+		color: var(--color-grey-light);
+	}
+}
