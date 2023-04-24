@@ -1,5 +1,4 @@
-import { useMemo, useState } from 'react';
-import { ITEMS_PER_PAGE } from '../../constants';
+import { ITEMS_PER_PAGE, TOTAL_COUNT } from '../../constants';
 import { Comment as CommentType } from '../../types/types';
 import Comment from '../Comment/Comment';
 import Pagination from '../ui/Pagination/Pagination';
@@ -7,21 +6,15 @@ import classes from './Comments.module.scss';
 
 type CommentsProps = {
 	items: CommentType[];
+	currentPage: number;
+	setCurrentPage: (page: number) => void;
 };
 
-const Comments = ({ items }: CommentsProps) => {
-	const [currentPage, setCurrentPage] = useState(1);
-
-	const currentData = useMemo(() => {
-		const firstPageIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-		const lastPageIndex = firstPageIndex + ITEMS_PER_PAGE;
-		return items.slice(firstPageIndex, lastPageIndex);
-	}, [currentPage, items]);
-
+const Comments = ({ items, currentPage, setCurrentPage }: CommentsProps) => {
 	return (
 		<>
 			<ul className={classes.comments}>
-				{currentData.map((comment: CommentType) => (
+				{items.map((comment: CommentType) => (
 					<Comment
 						key={comment.id}
 						createdAt={comment.createdAt}
@@ -33,7 +26,8 @@ const Comments = ({ items }: CommentsProps) => {
 			</ul>
 			<Pagination
 				currentPage={currentPage}
-				totalCount={items.length}
+				totalCount={TOTAL_COUNT}
+				// totalCount={items.length}
 				pageSize={ITEMS_PER_PAGE}
 				onPageChange={page => setCurrentPage(page)}
 			/>
