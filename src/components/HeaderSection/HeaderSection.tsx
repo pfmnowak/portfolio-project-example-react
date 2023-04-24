@@ -1,11 +1,11 @@
+import { Ref, forwardRef } from 'react';
 import Header from '../Header/Header';
 import classes from './HeaderSection.module.scss';
 
-const HeaderSection = () => {
+const HeaderSection = forwardRef(function HeaderSection(_props, ref: Ref<HTMLHeadingElement>) {
 	return (
 		<div className={classes['header-section']}>
-			<Header />
-
+			<Header ref={ref} />
 			<div className={classes.content}>
 				<div className={classes['header-text']}>
 					<h1 className={`${classes['heading-primary']} ${classes['heading-primary--sub']}`}>
@@ -28,6 +28,6 @@ const HeaderSection = () => {
 			</div>
 		</div>
 	);
-};
+});
 
 export default HeaderSection;

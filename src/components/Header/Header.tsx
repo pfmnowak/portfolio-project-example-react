@@ -1,10 +1,11 @@
+import { Ref, forwardRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import Button from '../ui/Button/Button';
 import classes from './Header.module.scss';
 
-const Header = () => {
+const Header = forwardRef(function Header(_props, ref: Ref<HTMLHeadingElement>) {
 	const clickBtnHandler = () => {
-		console.log('Button Clicked');
+		ref && 'current' in ref && ref.current && ref.current.scrollIntoView({ behavior: 'smooth' });
 	};
 
 	return (
@@ -39,6 +40,6 @@ const Header = () => {
 			<Button onClick={clickBtnHandler}>Comments</Button>
 		</header>
 	);
-};
+});
 
 export default Header;

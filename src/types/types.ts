@@ -11,3 +11,11 @@ export type Service = {
 	name: string;
 	description: string;
 };
+
+export type Comment = {
+	id: string;
+	name: string;
+	email: string;
+	content: string;
+	createdAt: string;
+};
