@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { toast } from 'react-toastify';
 import { API_URL } from '../../constants';
 import Button from '../ui/Button/Button';
 import CustomContainer from '../ui/CustomContainer/CustomContainer';
@@ -8,9 +9,20 @@ const AddComment = () => {
 	const nameRef = useRef<HTMLInputElement>(null);
 	const emailRef = useRef<HTMLInputElement>(null);
 	const contentRef = useRef<HTMLTextAreaElement>(null);
+	const toastId = useRef<null | string | number>(null);
 
 	const submitFormHandler = async (event: React.FormEvent) => {
 		event.preventDefault();
+
+		toastId.current = toast.loading('Sending the comment...', {
+			position: 'top-right',
+			autoClose: 5000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			theme: 'dark',
+		});
 
 		const rawResponse = await fetch(`${API_URL}/comments`, {
 			method: 'POST',
@@ -25,7 +37,22 @@ const AddComment = () => {
 			}),
 		});
 
-		rawResponse.ok && clearInputs();
+		if (rawResponse.ok) {
+			toast.update(toastId.current, {
+				render: 'Your comment was added successfully',
+				type: 'success',
+				isLoading: false,
+				autoClose: 5000,
+			});
+			clearInputs();
+		} else {
+			toast.update(toastId.current, {
+				render: 'Failed uploading the comment',
+				type: 'error',
+				isLoading: false,
+				autoClose: 5000,
+			});
+		}
 	};
 
 	const clearInputs = () => {

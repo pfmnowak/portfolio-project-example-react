@@ -1,5 +1,7 @@
 import { useRef } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import classes from './App.module.scss';
 import AddComment from './components/AddComment/AddComment';
 import CommentsSection from './components/CommentsSection/CommentsSection';
@@ -24,6 +26,7 @@ function App() {
 			<CommentsSection ref={commentsRef} />
 			<AddComment />
 			<Footer />
+			<ToastContainer />
 		</main>
 	);
 }
