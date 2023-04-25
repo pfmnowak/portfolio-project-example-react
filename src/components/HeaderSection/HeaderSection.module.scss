@@ -15,6 +15,7 @@
 	max-width: 117rem;
 	width: 100%;
 	margin: 0 auto;
+	z-index: 100;
 
 	@include respond(tab-port) {
 		flex-direction: column;
@@ -29,11 +30,11 @@
 	text-align: left;
 	color: #fafafa;
 
-	@include respond(tab-port) {
+	@include respond(tab-land) {
 		margin: 5rem;
 	}
 
-	@include respond(tab-port) {
+	@include respond(phone) {
 		margin: 3rem;
 	}
 }
@@ -87,5 +88,86 @@
 
 	@include respond(tab-port) {
 		width: 80%;
+	}
+}
+
+.shape {
+	z-index: 1;
+	position: absolute;
+
+	&--1 {
+		width: 9rem;
+		height: 14.5rem;
+
+		@include respond(phone) {
+			width: 6rem;
+			height: 9.6rem;
+		}
+
+		&--bottom {
+			left: 1rem;
+			bottom: 1rem;
+		}
+
+		&--top {
+			right: 1rem;
+			top: 1rem;
+		}
+	}
+
+	&--2 {
+		width: 15.8rem;
+		height: 15.8rem;
+		top: 9rem;
+		left: 5%;
+
+		@include respond(phone) {
+			width: 11rem;
+			height: 11rem;
+		}
+	}
+
+	&--3 {
+		width: 5rem;
+		height: 4.3rem;
+		left: 23rem;
+		top: 54%;
+
+		@include respond(phone) {
+			left: 10rem;
+			top: 75%;
+		}
+	}
+
+	&--4 {
+		width: 7.9rem;
+		height: 7.9rem;
+		right: 6%;
+		top: 43%;
+	}
+
+	&--5 {
+		width: 10rem;
+		height: 3.3rem;
+		right: 35%;
+		top: 38%;
+
+		@include respond(phone) {
+			display: none;
+		}
+	}
+
+	&--6 {
+		width: 8rem;
+		height: 8rem;
+		left: 41%;
+		top: 20%;
+	}
+
+	&--7 {
+		width: 4rem;
+		height: 4rem;
+		left: 41%;
+		top: 62%;
 	}
 }

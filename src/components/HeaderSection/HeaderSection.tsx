@@ -26,6 +26,38 @@ const HeaderSection = forwardRef(function HeaderSection(_props, ref: Ref<HTMLHea
 					<img src={require('../../img/model.png')} className={classes['model']} alt='model' />
 				</div>
 			</div>
+			<img
+				src={require('../../img/Shape 3.png')}
+				className={`${classes['shape']} ${classes['shape--1']} ${classes['shape--1--bottom']}`}
+			/>
+			<img
+				src={require('../../img/Shape 3.png')}
+				className={`${classes['shape']} ${classes['shape--1']} ${classes['shape--1--top']}`}
+			/>
+			<img
+				src={require('../../img/Shape 2.png')}
+				className={`${classes['shape']} ${classes['shape--2']}`}
+			/>
+			<img
+				src={require('../../img/Polygon 3 copy.png')}
+				className={`${classes['shape']} ${classes['shape--3']}`}
+			/>
+			<img
+				src={require('../../img/Polygon 3.png')}
+				className={`${classes['shape']} ${classes['shape--4']}`}
+			/>
+			<img
+				src={require('../../img/Shape 2 copy.png')}
+				className={`${classes['shape']} ${classes['shape--5']}`}
+			/>
+			<img
+				src={require('../../img/Polygon 1.png')}
+				className={`${classes['shape']} ${classes['shape--6']}`}
+			/>
+			<img
+				src={require('../../img/Polygon 1 copy.png')}
+				className={`${classes['shape']} ${classes['shape--7']}`}
+			/>
 		</div>
 	);
 });

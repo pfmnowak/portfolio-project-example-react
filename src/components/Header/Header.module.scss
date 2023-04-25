@@ -5,6 +5,7 @@
 	margin: 5rem auto;
 	max-width: 117rem;
 	width: 100%;
+	z-index: 100;
 
 	@include respond(tab-port) {
 		flex-direction: column;
