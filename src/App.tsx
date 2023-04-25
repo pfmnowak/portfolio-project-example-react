@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import classes from './App.module.scss';
+import AddComment from './components/AddComment/AddComment';
 import CommentsSection from './components/CommentsSection/CommentsSection';
 import Footer from './components/Footer/Footer';
 import HeaderSection from './components/HeaderSection/HeaderSection';
@@ -12,7 +13,7 @@ function App() {
 	const commentsRef = useRef<HTMLHeadingElement>(null);
 
 	return (
-		<div className={classes.app}>
+		<main className={classes.app}>
 			<HeaderSection ref={commentsRef} />
 			<Routes>
 				<Route path='/' element={<HomePage />} />
@@ -21,8 +22,9 @@ function App() {
 				<Route path='*' element={<Navigate to='/' replace />} />
 			</Routes>
 			<CommentsSection ref={commentsRef} />
+			<AddComment />
 			<Footer />
-		</div>
+		</main>
 	);
 }
 

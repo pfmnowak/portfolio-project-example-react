@@ -1,0 +1,54 @@
+@import '../../sass/main.scss';
+
+.add-comment {
+	background-color: var(--color-secondary);
+
+	&__heading {
+		font-size: 2.5rem;
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	max-width: 52rem;
+	width: 100%;
+
+	@include respond(phone) {
+		margin: auto;
+	}
+
+	&__user {
+		margin: 2rem 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		@include respond(phone) {
+			flex-direction: column;
+		}
+	}
+
+	&__input {
+		padding: 1rem;
+		background: none;
+		border: 1px solid var(--color-white);
+		color: var(--color-white);
+		width: 48%;
+
+		@include respond(phone) {
+			width: 100%;
+			margin: 2rem 0;
+		}
+	}
+
+	&__content {
+		padding: 1rem;
+		background: none;
+		border: 1px solid var(--color-white);
+		color: var(--color-white);
+		margin: 1rem 0 3rem 0;
+		width: 100%;
+	}
+}
