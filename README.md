@@ -21,9 +21,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Possible improvements ToDo
 
-- Add background icons in the Header
 - Add more Unit Tests
 - Add a toast messages when sending comment request
+
+## Running the application
+
+To test the application you can run it in the development mode by running `npm start` in the console.
+
+You can also test it live here: https://pfmnowak.github.io/portfolio-project-example-react/
 
 ## Available Scripts
 
