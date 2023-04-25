@@ -21,9 +21,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Possible improvements ToDo
 
-- Add comments section
 - Add background icons in the Header
 - Add more Unit Tests
+- Add a toast messages when sending comment request
 
 ## Available Scripts
 
